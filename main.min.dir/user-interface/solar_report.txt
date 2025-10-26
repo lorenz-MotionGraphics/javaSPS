@@ -1,0 +1,15 @@
+══════════════════════════════════════════════
+        SOLAR POWER SYSTEM REPORT
+══════════════════════════════════════════════
+
+Total Daily Load:              200.00 Wh
+Total Solar Power Needed:      40.00 W
+Number of Panels Required:     1 panels
+Battery Capacity Required:     46.30 Ah
+System Voltage:                12.00 V
+Inverter Size Recommended:     222.22 W
+Charge Controller Current:     10.42 A
+
+══════════════════════════════════════════════
+NOTE: Add 10-20% safety margin to all values
+══════════════════════════════════════════════

@@ -8,5 +8,15 @@
     "name": "harvey spatula",
     "wattage": 20.0,
     "hoursPerDay": 2.0
+  },
+  {
+    "name": "rice cooker",
+    "wattage": 20.0,
+    "hoursPerDay": 10.0
+  },
+  {
+    "name": "laptop",
+    "wattage": 150.0,
+    "hoursPerDay": 10.0
   }
 ]
