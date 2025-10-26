@@ -1,12 +1,26 @@
 [
   {
-    "name": "rice cooker",
-    "wattage": 20.0,
-    "hoursPerDay": 10.0
+    "name": "telivision",
+    "wattage": 10.0,
+    "quantity": 1,
+    "hoursPerDay": 2.0
   },
   {
-    "name": "laptop",
-    "wattage": 150.0,
-    "hoursPerDay": 10.0
+    "name": "rice cooker",
+    "wattage": 50.0,
+    "quantity": 1,
+    "hoursPerDay": 2.0
+  },
+  {
+    "name": "cellphone",
+    "wattage": 40.0,
+    "quantity": 3,
+    "hoursPerDay": 8.0
+  },
+  {
+    "name": "microwave",
+    "wattage": 100.0,
+    "quantity": 1,
+    "hoursPerDay": 1.0
   }
 ]

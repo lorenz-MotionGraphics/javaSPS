@@ -7,16 +7,18 @@ import org.fusesource.jansi.AnsiConsole;
 class Appliance {
     String name;
     double wattage;
+    int quantity;
     double hoursPerDay;
 
-    public Appliance(String name, double wattage, double hoursPerDay) {
+    public Appliance(String name, double wattage, int quantity, double hoursPerDay) {
         this.name = name;
         this.wattage = wattage;
+        this.quantity = quantity;
         this.hoursPerDay = hoursPerDay;
     }
 
     public double getDailyConsumption() {
-        return wattage * hoursPerDay;
+        return wattage * quantity * hoursPerDay;
     }
 }
 
@@ -236,10 +238,11 @@ public class solar {
                 }
 
                 double watt = inputPositiveDouble(sc, "> Wattage (W): ");
+                int qty = inputPositiveInt(sc, "> Quantity: ");
                 double hrs = inputRangeDouble(sc, "> Hours per day: ", 0, 24);
                 
-                appliances.add(new Appliance(name, watt, hrs));
-                UI.printSuccess("Added: " + name + " (" + watt + "W x " + hrs + "h = " + (watt * hrs) + "Wh/day)");
+                appliances.add(new Appliance(name, watt, qty, hrs));
+                UI.printSuccess("Added: " + qty + " x " + name + " (" + watt + "W x " + hrs + "h = " + (watt * qty * hrs) + "Wh/day)");
                 System.out.println();
                 count++;
             }
@@ -275,7 +278,6 @@ public class solar {
             sc.nextLine();
             
         } finally {
-            // Clean up Jansi
             AnsiConsole.systemUninstall();
             sc.close();
         }
@@ -288,9 +290,9 @@ public class solar {
         }
 
         UI.printHeader("APPLIANCE SUMMARY");
-        System.out.println(UI.CYAN + "\n+----+-------------------------+----------+-----------+-------------+");
-        System.out.println("|  # | Appliance               | Wattage  | Hours/Day | Daily (Wh)  |");
-        System.out.println("+----+-------------------------+----------+-----------+-------------+" + UI.RESET);
+        System.out.println(UI.CYAN + "\n+----+-------------------------+----------+----------+-----------+-------------+");
+        System.out.println("|  # | Appliance               | Wattage  | Quantity | Hours/Day | Daily (Wh)  |");
+        System.out.println("+----+-------------------------+----------+----------+-----------+-------------+" + UI.RESET);
         
         int idx = 1;
         double totalDaily = 0;
@@ -298,15 +300,16 @@ public class solar {
             double daily = a.getDailyConsumption();
             totalDaily += daily;
             System.out.printf(UI.CYAN + "|" + UI.RESET + " %2d " + UI.CYAN + "|" + UI.RESET + 
-                " %-23s " + UI.CYAN + "|" + UI.YELLOW + " %6.0f W " + UI.CYAN + "|" + UI.BLUE + 
-                " %7.1f h " + UI.CYAN + "|" + UI.GREEN + " %9.1f Wh" + UI.CYAN + " |" + UI.RESET + "\n",
-                idx++, truncate(a.name, 23), a.wattage, a.hoursPerDay, daily);
+                " %-23s " + UI.CYAN + "|" + UI.YELLOW + " %6.0f W " + UI.CYAN + "|" + UI.BRIGHT_WHITE + 
+                " %8d " + UI.CYAN + "|" + UI.BLUE + " %7.1f h " + UI.CYAN + "|" + UI.GREEN + 
+                " %9.1f Wh" + UI.CYAN + " |" + UI.RESET + "\n",
+                idx++, truncate(a.name, 23), a.wattage, a.quantity, a.hoursPerDay, daily);
         }
         
-        System.out.println(UI.CYAN + "+----+-------------------------+----------+-----------+-------------+" + UI.RESET);
-        System.out.printf(UI.CYAN + "| " + UI.BRIGHT_WHITE + "%-46s " + UI.CYAN + "| " + UI.BRIGHT_GREEN + 
+        System.out.println(UI.CYAN + "+----+-------------------------+----------+----------+-----------+-------------+" + UI.RESET);
+        System.out.printf(UI.CYAN + "| " + UI.BRIGHT_WHITE + "%-58s " + UI.CYAN + "| " + UI.BRIGHT_GREEN + 
             "%9.1f Wh" + UI.CYAN + " |" + UI.RESET + "\n", "TOTAL DAILY ENERGY CONSUMPTION", totalDaily);
-        System.out.println(UI.CYAN + "+----------------------------------------------------+-------------+" + UI.RESET);
+        System.out.println(UI.CYAN + "+------------------------------------------------------------+-------------+" + UI.RESET);
     }
 
     private static String truncate(String str, int maxLen) {
@@ -321,6 +324,19 @@ public class solar {
                 UI.printWarning("[WARNING] Please enter a number between " + min + " and " + max);
             } catch (NumberFormatException e) {
                 UI.printWarning("[WARNING] Invalid input. Please enter a number.");
+            }
+        }
+    }
+
+    private static int inputPositiveInt(Scanner sc, String prompt) {
+        while (true) {
+            System.out.print(UI.CYAN + prompt + UI.RESET);
+            try {
+                int value = Integer.parseInt(sc.nextLine().trim());
+                if (value > 0) return value;
+                UI.printWarning("[WARNING] Please enter a positive number");
+            } catch (NumberFormatException e) {
+                UI.printWarning("[WARNING] Invalid number format");
             }
         }
     }
