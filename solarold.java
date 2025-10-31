@@ -92,7 +92,7 @@ class JsonStorage {
     }
 }
 
-public class solar {
+public class solarold {
 
     // ✅ Jansi-safe wrappers must be inside the class
     public static void enableJansiSafe() {

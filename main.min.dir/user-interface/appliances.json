@@ -1,12 +1,7 @@
 [
   {
-    "name": "microwave",
-    "wattage": 20.0,
-    "hoursPerDay": 10.0
-  },
-  {
     "name": "telivision",
-    "wattage": 30.0,
-    "hoursPerDay": 12.0
+    "wattage": 50.0,
+    "hoursPerDay": 8.0
   }
 ]

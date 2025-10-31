@@ -130,7 +130,7 @@ class SolarCalculator {
     }
 }
 
-public class userInterface extends JFrame {
+public class userInterFace extends JFrame {
     private DefaultTableModel model;
     private JTable table;
     private JTextArea reportArea;
@@ -144,7 +144,7 @@ public class userInterface extends JFrame {
     private final Color PANEL_BG = Color.WHITE;
     private final Color TEXT_COLOR = new Color(33, 33, 33);
 
-    public userInterface() {
+    public userInterFace() {
         setTitle("Solar Power System Calculator");
         setSize(1200, 750);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -552,6 +552,6 @@ public class userInterface extends JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        SwingUtilities.invokeLater(() -> new userInterface().setVisible(true));
+        SwingUtilities.invokeLater(() -> new userInterFace().setVisible(true));
     }
 }

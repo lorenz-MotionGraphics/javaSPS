@@ -22,5 +22,11 @@
     "wattage": 100.0,
     "quantity": 1,
     "hoursPerDay": 1.0
+  },
+  {
+    "name": "tablet",
+    "wattage": 15.0,
+    "quantity": 1,
+    "hoursPerDay": 8.0
   }
 ]
