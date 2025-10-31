@@ -58,5 +58,11 @@
     "wattage": 15.0,
     "quantity": 1,
     "hoursPerDay": 8.0
+  },
+  {
+    "name": "router",
+    "wattage": 20.0,
+    "quantity": 1,
+    "hoursPerDay": 24.0
   }
 ]
