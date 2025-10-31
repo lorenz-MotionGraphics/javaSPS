@@ -1,1 +1,1 @@
-java SPS project
+java Solar Power System calculator project

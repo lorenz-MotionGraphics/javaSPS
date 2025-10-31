@@ -5,7 +5,6 @@ echo   Solar Project Executor
 echo ===========================
 echo.
 
-REM === Step 1: Compile Java ===
 echo [1/3] Compiling solar.java...
 javac -cp ".;gson-2.10.1.jar;jansi-2.4.0.jar" solar.java
 if %errorlevel% neq 0 (
@@ -14,10 +13,9 @@ if %errorlevel% neq 0 (
     pause
     exit /b
 )
-echo ✅ Compilation successful!
+echo Compilation successful!
 echo.
 
-REM === Step 2: Ask if user wants to run Git commands ===
 set /p runGit=Do you want to run Git commands (Y/N)? 
 if /i "%runGit%"=="Y" (
     echo.
@@ -50,7 +48,6 @@ if /i "%runGit%"=="Y" (
 )
 echo.
 
-REM === Step 3: Run the Java program ===
 echo [3/3] Running Java program...
 java -cp ".;gson-2.10.1.jar;jansi-2.4.0.jar" solar
 if %errorlevel% neq 0 (
