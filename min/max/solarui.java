@@ -525,10 +525,7 @@ public class solarui extends JFrame {
 
     private void loadConfig() {
         Map<String, Double> cfg = JsonStorage.loadConfig();
-        if (cfg.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No configuration file found!", "File Not Found", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
+        if (cfg.isEmpty()) { JOptionPane.showMessageDialog(this, "No configuration file found!", "File Not Found", JOptionPane.WARNING_MESSAGE); return; }
         txtSunHours.setText(String.valueOf(cfg.getOrDefault("sunHours", 5.0)));
         txtVoltage.setText(String.valueOf(cfg.getOrDefault("voltage", 12.0)));
         txtPanel.setText(String.valueOf(cfg.getOrDefault("panel", 100.0)));

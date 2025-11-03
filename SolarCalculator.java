@@ -7,16 +7,9 @@ class SolarCalculator {
     List<Appliance> appliances;
     double sunHours, systemVoltage, panelWatt, daysOfAutonomy, dod, inverterEfficiency;
 
-    public SolarCalculator(List<Appliance> appliances) {
-        this.appliances = appliances;
-    }
-
-    public double getTotalDailyEnergy() {
-        return appliances.stream().mapToDouble(Appliance::getDailyConsumption).sum();
-    }
-
-    public void computeSystem(double sunHours, double systemVoltage, double panelWatt,
-                              double daysOfAutonomy, double dod, double inverterEfficiency) {
+    public SolarCalculator(List<Appliance> appliances) { this.appliances = appliances; }
+    public double getTotalDailyEnergy() { return appliances.stream().mapToDouble(Appliance::getDailyConsumption).sum(); }
+    public void computeSystem(double sunHours, double systemVoltage, double panelWatt, double daysOfAutonomy, double dod, double inverterEfficiency) {
         this.sunHours = sunHours;
         this.systemVoltage = systemVoltage;
         this.panelWatt = panelWatt;
