@@ -1,134 +1,32 @@
 [
   {
-    "name": "telivision",
-    "wattage": 10.0,
-    "quantity": 1,
-    "hoursPerDay": 2.0
-  },
-  {
-    "name": "rice cooker",
-    "wattage": 50.0,
-    "quantity": 1,
-    "hoursPerDay": 2.0
-  },
-  {
-    "name": "cellphone",
-    "wattage": 40.0,
+    "name": "a",
+    "wattage": 23.0,
     "quantity": 3,
-    "hoursPerDay": 8.0
+    "hoursPerDay": 3.0
   },
   {
-    "name": "microwave",
-    "wattage": 100.0,
+    "name": "t",
+    "wattage": 4.0,
+    "quantity": 2,
+    "hoursPerDay": 23.0
+  },
+  {
+    "name": "y",
+    "wattage": 45.0,
+    "quantity": 5,
+    "hoursPerDay": 12.0
+  },
+  {
+    "name": "g",
+    "wattage": 67.0,
     "quantity": 1,
-    "hoursPerDay": 1.0
+    "hoursPerDay": 20.0
   },
   {
-    "name": "tablet",
-    "wattage": 15.0,
-    "quantity": 1,
-    "hoursPerDay": 8.0
-  },
-  {
-    "name": "telivision",
-    "wattage": 10.0,
-    "quantity": 1,
-    "hoursPerDay": 2.0
-  },
-  {
-    "name": "rice cooker",
-    "wattage": 50.0,
-    "quantity": 1,
-    "hoursPerDay": 2.0
-  },
-  {
-    "name": "cellphone",
-    "wattage": 40.0,
-    "quantity": 3,
-    "hoursPerDay": 8.0
-  },
-  {
-    "name": "microwave",
-    "wattage": 100.0,
-    "quantity": 1,
-    "hoursPerDay": 1.0
-  },
-  {
-    "name": "tablet",
-    "wattage": 15.0,
-    "quantity": 1,
-    "hoursPerDay": 8.0
-  },
-  {
-    "name": "router",
-    "wattage": 20.0,
-    "quantity": 1,
-    "hoursPerDay": 24.0
-  },
-  {
-    "name": "telivision",
-    "wattage": 10.0,
-    "quantity": 1,
-    "hoursPerDay": 2.0
-  },
-  {
-    "name": "rice cooker",
-    "wattage": 50.0,
-    "quantity": 1,
-    "hoursPerDay": 2.0
-  },
-  {
-    "name": "cellphone",
-    "wattage": 40.0,
-    "quantity": 3,
-    "hoursPerDay": 8.0
-  },
-  {
-    "name": "microwave",
-    "wattage": 100.0,
-    "quantity": 1,
-    "hoursPerDay": 1.0
-  },
-  {
-    "name": "tablet",
-    "wattage": 15.0,
-    "quantity": 1,
-    "hoursPerDay": 8.0
-  },
-  {
-    "name": "telivision",
-    "wattage": 10.0,
-    "quantity": 1,
-    "hoursPerDay": 2.0
-  },
-  {
-    "name": "rice cooker",
-    "wattage": 50.0,
-    "quantity": 1,
-    "hoursPerDay": 2.0
-  },
-  {
-    "name": "cellphone",
-    "wattage": 40.0,
-    "quantity": 3,
-    "hoursPerDay": 8.0
-  },
-  {
-    "name": "microwave",
-    "wattage": 100.0,
-    "quantity": 1,
-    "hoursPerDay": 1.0
-  },
-  {
-    "name": "tablet",
-    "wattage": 15.0,
-    "quantity": 1,
-    "hoursPerDay": 8.0
-  },
-  {
-    "name": "router",
-    "wattage": 20.0,
-    "quantity": 1,
-    "hoursPerDay": 24.0
+    "name": "h",
+    "wattage": 45.0,
+    "quantity": 4,
+    "hoursPerDay": 13.0
   }
 ]
