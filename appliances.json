@@ -28,5 +28,35 @@
     "wattage": 45.0,
     "quantity": 4,
     "hoursPerDay": 13.0
+  },
+  {
+    "name": "a",
+    "wattage": 23.0,
+    "quantity": 3,
+    "hoursPerDay": 3.0
+  },
+  {
+    "name": "t",
+    "wattage": 4.0,
+    "quantity": 2,
+    "hoursPerDay": 23.0
+  },
+  {
+    "name": "y",
+    "wattage": 45.0,
+    "quantity": 5,
+    "hoursPerDay": 12.0
+  },
+  {
+    "name": "g",
+    "wattage": 67.0,
+    "quantity": 1,
+    "hoursPerDay": 20.0
+  },
+  {
+    "name": "h",
+    "wattage": 45.0,
+    "quantity": 4,
+    "hoursPerDay": 13.0
   }
 ]

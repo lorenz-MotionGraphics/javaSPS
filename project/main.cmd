@@ -1,0 +1,1 @@
+java -cp "solar.jar;lib/*" solar
